@@ -1,0 +1,5 @@
+site_name: Fivuvuv's note
+theme:
+  name: 'material'
+  palette:
+    primary: black
