@@ -1,0 +1,2022 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../%E5%85%B3%E4%BA%8Egithub%E9%A1%B9%E7%9B%AE%E8%94%9A%E8%93%9D%E6%89%8B%E6%84%9F2d%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E7%A0%94%E7%A9%B6/">
+      
+      
+        <link rel="next" href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/">
+      
+      
+      <link rel="icon" href="../../assets/images/hinalogo.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>ai研究概述 - Fivuvuv's note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Fivuvuv&#39;s note" class="md-header__button md-logo" aria-label="Fivuvuv's note" data-md-component="logo">
+      
+  <img src="../../assets/images/hinalogo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fivuvuv's note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ai研究概述
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/2333qbyqby/new-public-note" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2333qbyqby/new-public-note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Fivuvuv&#39;s note" class="md-nav__button md-logo" aria-label="Fivuvuv's note" data-md-component="logo">
+      
+  <img src="../../assets/images/hinalogo.jpg" alt="logo">
+
+    </a>
+    Fivuvuv's note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/2333qbyqby/new-public-note" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2333qbyqby/new-public-note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Fivuvuv's Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E5%85%B3%E4%BA%8Egithub%E9%A1%B9%E7%9B%AE%E8%94%9A%E8%93%9D%E6%89%8B%E6%84%9F2d%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E7%A0%94%E7%A9%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于github项目蔚蓝手感2d控制器的研究
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ai研究概述
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ai研究概述
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考资料：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概要：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      游戏AI是什么？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态机
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="状态机">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么需要状态机？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      行为树
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="行为树">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么需要行为树？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      行为树的推导方法论
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      行为树的概念（behavior tree）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      不同类型的控制结点：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="不同类型的控制结点：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      顺序节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      并行节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      装饰结点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      行为树举例说明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity" class="md-nav__link">
+    <span class="md-ellipsis">
+      在unity中使用行为树插件：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goapgoal-orentated-action-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      GOAP(Goal Orentated Action planning):
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GOAP(Goal Orentated Action planning):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      概述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goap" class="md-nav__link">
+    <span class="md-ellipsis">
+      GOAP使用场景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goap_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      GOAP中的一些概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体示例：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      与行为树和状态机的对比
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#htnhierarchical-task-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTN（Hierarchical Task Networks）：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTN（Hierarchical Task Networks）：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      学习资料：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念介绍：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键词：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="关键词：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      大致架构
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      详细概念：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="详细概念：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-world-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      世界状态（The World State）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      传感器（Sensor）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primitive-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      原子任务（Primitive Tasks)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composite-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      复合任务（Composite Tasks）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法（method）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      三者关系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      计划（Plan）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      规划器（Planner）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行器：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-htnhtn" class="md-nav__link">
+    <span class="md-ellipsis">
+      只狼的游戏AI----以弦一郎为例（行为树与HTN的结合，变种的HTN或者行为树）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="只狼的游戏AI----以弦一郎为例（行为树与HTN的结合，变种的HTN或者行为树）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      写在开头：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI结构：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../图形与视觉" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    图形与视觉
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            计算机语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../数据结构与算法" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构与算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../计算机基础" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../常见工具使用" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用工具使用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    杂项
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            杂项
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%9D%82%E9%A1%B9/mkdocs%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../研究生打杂" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    研究生打杂
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../数学" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../面试" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      参考资料：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      概要：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概要：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      游戏AI是什么？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      状态机
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="状态机">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么需要状态机？
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      行为树
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="行为树">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      为什么需要行为树？
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      行为树的推导方法论
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#behavior-tree" class="md-nav__link">
+    <span class="md-ellipsis">
+      行为树的概念（behavior tree）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      不同类型的控制结点：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="不同类型的控制结点：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      顺序节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      选择节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      并行节点
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      装饰结点
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      行为树举例说明
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unity" class="md-nav__link">
+    <span class="md-ellipsis">
+      在unity中使用行为树插件：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#goapgoal-orentated-action-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      GOAP(Goal Orentated Action planning):
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GOAP(Goal Orentated Action planning):">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      概述
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goap" class="md-nav__link">
+    <span class="md-ellipsis">
+      GOAP使用场景
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#goap_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      GOAP中的一些概念
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体示例：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      与行为树和状态机的对比
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#htnhierarchical-task-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTN（Hierarchical Task Networks）：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="HTN（Hierarchical Task Networks）：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      学习资料：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      概念介绍：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      关键词：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="关键词：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      大致架构
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      详细概念：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="详细概念：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-world-state" class="md-nav__link">
+    <span class="md-ellipsis">
+      世界状态（The World State）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      传感器（Sensor）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#primitive-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      原子任务（Primitive Tasks)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composite-tasks" class="md-nav__link">
+    <span class="md-ellipsis">
+      复合任务（Composite Tasks）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      方法（method）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      三者关系
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#plan" class="md-nav__link">
+    <span class="md-ellipsis">
+      计划（Plan）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#planner" class="md-nav__link">
+    <span class="md-ellipsis">
+      规划器（Planner）
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      执行器：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ai-htnhtn" class="md-nav__link">
+    <span class="md-ellipsis">
+      只狼的游戏AI----以弦一郎为例（行为树与HTN的结合，变种的HTN或者行为树）
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="只狼的游戏AI----以弦一郎为例（行为树与HTN的结合，变种的HTN或者行为树）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      写在开头：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ai_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      AI结构：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>ai研究概述</h1>
+
+<h2 id="_1">参考资料：</h2>
+<p><a href="https://design.jskyzero.com/2023/10/10/sekiro_lion_tamarin_AI/">AI反拆：只狼狮子猿 | 设计者笔记 (jskyzero.com)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/614731111">如何设计有“对话感”的BOSS？《只狼》Ai完全拆解。 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://blog.csdn.net/jk_chen_acmer/article/details/118894596">HTN框架介绍、开发心得-CSDN博客</a></p>
+<p><a href="https://www.gameres.com/830335.html">游戏AI研究（一）：感知AI - GameRes游资网</a></p>
+<p><a href="https://blog.csdn.net/qq_39885372/article/details/103950973">FSM（状态机）、HFSM（分层状态机）、BT（行为树）的区别_对战状态机-CSDN博客</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/463182588">行为树入门教程 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/675093070">游戏开发技术杂谈14：理解行为树 - 知乎 (zhihu.com)</a></p>
+<p>https://robohub.org/introduction-to-behavior-trees/</p>
+<p>https://zhuanlan.zhihu.com/p/463182588</p>
+<p><a href="https://zhuanlan.zhihu.com/p/611393851">行为树的理论与实践入门 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/575072589">GOAP思路解析与代码框架 - 知乎 (zhihu.com)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/372718085">&lt;游戏开发&gt;怪物AI实现方案-GOAP - 知乎 (zhihu.com)</a></p>
+<p><a href="https://www.lfzxb.top/goal-oriented-action-planning-tech-share/">目标导向的AI系统（GOAP）技术分享 | 登峰造极者，殊途亦同归。 (lfzxb.top)</a></p>
+<p><a href="https://github.com/AkiKurisu/AkiGOAP">AkiKurisu/AkiGOAP: Modular and high-performed Unity Goal Oriented Action Planner with well designed visual graph editor (github.com)</a></p>
+<p><a href="https://developer.unity.cn/projects/657fcd52edbc2a002654a6b4">游戏AI行为决策方法——HTN 教程（附代码与项目） - 技术专栏 - Unity官方开发者社区</a></p>
+<p><a href="https://yimicgh.top/学习笔记/AI-Plan-11-Task-Networks/">Ai Plan (11) Task Network | Yimi的小天地 (yimicgh.top)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/597082052">AI算法--通过实例探讨分层任务网络规划(HTN) - 知乎 (zhihu.com)</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/607593872">HTN简略笔记 - 知乎 (zhihu.com)</a></p>
+<!--more-->
+
+<h2 id="_2">概要：</h2>
+<h3 id="ai">游戏AI是什么？</h3>
+<p>在以前游戏AI基本上都是程序员预先定义编写好可能发生的行为，而不具有机器学习那种自我学习的特性。这是因为游戏AI主要职责是模拟出智能行为，而并非学习（例如：街道上会避让车的人群，天空中乱飞的小鸟，来回巡逻的守卫，兵线上的小兵...）。而游戏AI往往使用的是以行为树为代表的人工设计方法，而很少应用到机器学习技术。可以说游戏AI是智能的假象。</p>
+<p>在游戏中，AI（人工智能）是指模拟和实现游戏角色的智能行为的技术。虽然在过去，游戏AI主要依赖程序员预定义可能发生的行为，但随着技术的发展，现代游戏AI已经涵盖了更多复杂的技术和方法。以下是一些常见的游戏AI架构：</p>
+<ol>
+<li><strong>行为树（Behavior Trees）</strong>：行为树是一种流行的游戏AI设计方法，它将角色的行为表示为树结构。游戏开发者可以通过安排节点和连接来控制角色的决策和行为。</li>
+<li><strong>状态机（Finite State Machines）</strong>：状态机是一种基本的游戏AI架构，角色可以处于不同的状态，并根据条件或事件转换状态。</li>
+<li><strong>路径规划（Pathfinding Algorithms）</strong>：路径规划是指让角色在游戏中找到最佳路径的技术。常见的算法包括A*算法和Dijkstra算法。</li>
+<li><strong>博弈树（Minimax Algorithm）</strong>：在许多游戏中，特别是棋类游戏，博弈树是一种用于决策制定的重要技术，通过搜索可能的走法并选择最有利的策略。</li>
+<li><strong>机器学习（Machine Learning）</strong>：现代游戏开始采用机器学习技术来改进游戏AI的表现。深度强化学习等技术被应用于让AI角色更加智能和自适应。</li>
+</ol>
+<h2 id="_3">状态机</h2>
+<p>状态机模式是一个游戏常用的经典设计模式，常被用作管理一种物体的各种状态（例如管理人物的行走，站立，跳跃等状态）</p>
+<p>游戏 AI 选择状态机模式的原因有几个重要的考虑：</p>
+<ol>
+<li><strong>简单性和可维护性</strong>：状态机模式非常直观和易于理解。通过将行为划分为不同的状态，并定义状态之间的转换规则，使得代码更易维护和扩展。开发人员可以直观地查看状态之间的转换关系，从而更容易调试和修改行为。</li>
+<li><strong>灵活性</strong>：状态机模式提供了对游戏 AI 行为进行动态管理和调整的灵活性。通过修改状态之间的转换规则，可以改变 AI 的行为方式，使得游戏 AI 可以根据不同的情况作出不同的反应。</li>
+<li><strong>逻辑分离</strong>：使用状态机模式可以将游戏 AI 的逻辑和状态信息进行分离。这样可以使得 AI 的行为更具可读性，并允许开发人员单独处理状态转换逻辑和状态具体行为逻辑，提高了代码的组织和可维护性。</li>
+<li><strong>适用性广泛</strong>：状态机模式适用于各种不同类型的游戏 AI，无论是简单的角色移动AI还是复杂的决策系统。状态机模式是一种通用且有效的设计模式，适用于各种游戏 AI 场景。</li>
+</ol>
+<h3 id="_4">为什么需要状态机？</h3>
+<p>假如我们正在开发一款动作游戏，当前的任务是实现根据输入来控制主角的行为——当按下B键时，他应该跳跃。</p>
+<p>直观的代码：</p>
+<pre><code class="language-C++">   if (input == PRESS_B) {
+        if (!m_isJumping) {
+            m_isJumping = true;
+            Jump();//跳跃的代码
+        }
+    }
+</code></pre>
+<p>后来我们需要添加更多行为了，所有行为如下：</p>
+<pre><code class="language-C++"> if (input == PRESS_B) {
+        //如果在站立时且没在跳跃，则跳跃
+        if (!m_isJumping &amp;&amp; m_isStanding) {
+            m_isJumping = true;
+            player.jump();//跳跃的代码
+        }
+    }
+    else if (input == PRESS_DOWN) {
+        //如果在跳跃时且没在俯冲，则俯冲
+        if (m_isJumping &amp;&amp; !m_isDiving) {
+            m_isDiving
+            player.dive();//俯冲的代码
+        }
+        //如果没在跳跃
+        else if (!m_isJumping) {
+            //如果站立时，则蹲下
+            if (m_isStanding) {
+                m_isStanding = false;
+                player.sneak();//蹲下的代码
+            }
+            //如果蹲下时，则站立
+            else {
+                m_isStanding = true;
+                player.stand();//站立的代码
+            }
+        }
+    }
+</code></pre>
+<p>可以看到一堆if-else语句非常复杂，要是添加更多行为，其逻辑结构更加难以维护，而且主角的代码又得重新编译（耦合性大）</p>
+<p>一个可行的办法是将这些 <strong>状态&amp;状态切换&amp;状态对应的行为</strong> 封装成类，</p>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/1409576-20181226091322393-1146430295.png" /></p>
+<p>代码实现1：</p>
+<pre><code class="language-C++">//状态接口类
+class State {
+public:
+    //处理输入，然后根据输入转换相应的状态
+    virtual void handleInput(Player&amp; player,const Input&amp; input) = 0;
+};
+//站立状态
+class StandState : public State {
+public:
+    void handleInput(Player&amp; player, const Input&amp; input) override{
+        if (input == PRESS_B) {
+            player.jump();//角色跳跃的代码
+            player.setState(JumpState());
+        }
+        else if (input == PRESS_DOWN) {
+            player.sneak();//角色蹲下的代码
+            player.setState(SneakState());
+        }
+    }
+};
+//跳跃状态
+class JumpState : public State {
+public:
+    void handleInput(Player&amp; player, const Input&amp; input) override {
+        if (input == PRESS_DOWN) {
+            player.dive();//角色俯冲的代码
+            player.setState(DiveState());
+        }
+    }
+};
+//下蹲状态
+class SneakState : public State {
+public:
+    void handleInput(Player&amp; player, const Input&amp; input) override {
+        if (input == PRESS_DOWN) {
+            player.stand();//角色站立的代码
+            player.setState(StandState());
+        }
+    }
+};
+//俯冲状态
+class DiveState : public State {
+public:
+    void handleInput(Player&amp; player, const Input&amp; input) override {
+    }
+};
+</code></pre>
+<p>代码实现2：</p>
+<pre><code class="language-C#"> public enum GameState
+{
+    //游戏开始
+    GameStart,
+    Preparation,
+    //玩家回合
+    PlayerRoundStartResolution,
+    PlayerAction,
+    PlayerRoundEndResolution,
+    //敌人回合
+    EnemyRoundStartResolution,
+    EnemyAction,
+    EnemyRoundEndResolution,
+    //战斗结束
+    PlayerLose,
+    PlayerLoseResolution,
+    PlayerWin,
+    Reward
+}
+
+public interface IState
+{
+    public void OnEnter();
+
+    public void OnUpdate();
+
+    public void OnExit();
+}
+</code></pre>
+<p>unity的动画状态机就是一个很好的例子</p>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/1409576-20190207223240946-913199845.jpg" /></p>
+<h2 id="_5">行为树</h2>
+<h3 id="_6">为什么需要行为树？</h3>
+<ol>
+<li>
+<p><strong>层次化结构</strong>：行为树以树形结构组织 AI 的行为，具有层次化的特点，从顶部的根节点开始，逐级展开到叶子节点。这种结构使得行为树更容易理解和管理，能够清晰地表达 AI 的行为逻辑。</p>
+</li>
+<li>
+<p><strong>灵活性</strong>：行为树提供了更灵活的行为组合方式，通过组合不同类型的节点（例如序列节点、选择节点、并行节点等），可以实现丰富多样的行为表达。这种灵活性使得行为树适用于各种复杂的 AI 行为设计需求。</p>
+</li>
+<li>
+<p><strong>可扩展性</strong>：行为树易于扩展和调整。开发人员可以轻松地添加、修改或删除行为树的节点，而不会影响到其他部分的逻辑。这种特性使得行为树在面对复杂的 AI 行为需求时更加适用。</p>
+</li>
+</ol>
+<p><img alt="Unity战斗框架 优化Animator动画状态机排线_战斗动画状态机-CSDN博客" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/20190723100031475.png" /></p>
+<p>相较于状态机，行为树在复杂的 AI 行为设计上具有更多的优势，尤其适用于需要灵活、层次化、可扩展和容错的 AI 行为模型。</p>
+<p>行为树是当前最主流的游戏开发中的AI实现方案，和状态机这样概念结构比较简单的模型不同，行为树自带了很多专属于行为树的概念，比如组合、装饰器、任务等。</p>
+<h3 id="_7">行为树的推导方法论</h3>
+<p><a href="https://zhuanlan.zhihu.com/p/675093070">游戏开发技术杂谈14：理解行为树 - 知乎 (zhihu.com)</a></p>
+<p>简而言之，在游戏开发中使用行为树其实就是通过提供一个合理的逻辑表达方式来帮助策划，使得策划可以完全独立于程序进行配置</p>
+<h3 id="behavior-tree">行为树的概念（behavior tree）</h3>
+<ol>
+<li><strong>行为树是树：</strong>执行时从根结点开始按照指定的顺序遍历，直到到达终结状态</li>
+<li><strong>叶子结点都是可执行的行为:</strong>叶子结点会进行具体的操作，可以是一个简单的检测操作，也可以是一个更复杂的操作，结点会返回状态信息(成功，失败，运行中)。</li>
+<li><strong>内部结点控制树的遍历：</strong>内部结点会根据孩子结点返回的状态信息，按照特定的规则确定下一个执行的结点。</li>
+</ol>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/image.png" /></p>
+<ol>
+<li>tick:行为树从根节点开始按照预定义的顺序遍历各个节点并执行他们的行为的过程称为一次tick，会返回<strong>成功(success)</strong>，<strong>失败(failure)</strong>，<strong>运行中(running)</strong>的状态信息给它的父结点。</li>
+<li><strong>行为结点(execution node)</strong>：行为树的叶子结点，可以是动作结点(action node)或条件结点(condition node)。对于条件结点(condition node)会在一次tick后立马返回<strong>成功或</strong>失败的状态信息。对于动作结点(action node)则可以跨越多个tick执行，直到到达它的终结状态。一般来说，条件结点用于简单的判断(比如钳子是否打开?)，动作结点用于表示复杂的行为(比如打开房门)。</li>
+<li><strong>控制结点(</strong><strong>control node</strong><strong>)：</strong>控制结点是行为树的内部结点，它们定义了遍历其孩子结点的方式。<strong>控制结点的孩子可以是行为结点，也可以是控制结点</strong>。<strong>顺序(Sequence)</strong>，<strong>备选(Fallback)</strong>，<strong>并行(Parallel)这3种类型的控制结点可以有任意数量的孩子结点</strong><strong>，它们的区别在于对其孩子结点的处理方式。而</strong><strong>装饰(Decorator)结点只能有一个孩子结点</strong>，用来对孩子结点的行为进行自定义修改。</li>
+</ol>
+<h3 id="_8">不同类型的控制结点：</h3>
+<h4 id="_9">顺序节点</h4>
+<p>按顺序执行孩子结点直到其中一个孩子结点返回失败状态或所有孩子结点返回成功状态。</p>
+<p><img alt="" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/image.png" /></p>
+<h4 id="_10">选择节点</h4>
+<p>按顺序执行孩子结点直到其中一个孩子结点返回成功状态或所有孩子结点返回失败状态。一般用来实现角色的选择行为。</p>
+<p><img alt="" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/bt_fallback_node.png" /></p>
+<h4 id="_11">并行节点</h4>
+<p>“并行执行”所有孩子结点。直到至少M个孩子(M的值在1到N之间)结点返回成功状态或所有孩子结点返回失败状态。</p>
+<p><img alt="" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/1.png" /></p>
+<h4 id="_12">装饰结点</h4>
+<p>装饰结点：以自定义的方式修改孩子结点的行为。比如Invert类型的装饰结点，可以反转其孩子结点返回的状态信息。为了方便他人理解，应该尽可能使用比较常见的装饰结点。</p>
+<p><img alt="" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/2.png" /></p>
+<h3 id="_13">行为树举例说明</h3>
+<p>有一个角色的行为树，</p>
+<p>当它周围没有敌人时，保持巡逻状态；</p>
+<p>当它周围有敌人时，前往敌人的位置；</p>
+<p>当它靠近敌人，达到攻击的范围时，执行攻击操作；</p>
+<p>当敌人被消灭时，周围没有敌人了，回到之前的巡逻状态。</p>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/v2-a800c1c10fe5e8f13db4ad82f6d126f4_720w.webp" /></p>
+<p><strong>行为节点（Action）</strong></p>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/v2-541de51410a1c5b8983a2eef32dbedf7_r.jpg" /></p>
+<p>没有子节点，用以执行具体行为的节点。</p>
+<p><strong>条件节点（Conditional）</strong></p>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/v2-4e0c131189696544271fda087c56ea2b_720w.webp" /></p>
+<p>没有子节点，用以判定条件是否成立的节点。</p>
+<h3 id="unity">在unity中使用行为树插件：</h3>
+<p>这边进行样例演示</p>
+<h2 id="goapgoal-orentated-action-planning">GOAP(Goal Orentated Action planning):</h2>
+<h3 id="_14">概述</h3>
+<p>目标导向型行动计划（简称GOAP）是一种能够轻松呈现给你的代理选择的AI系统，也是帮助你可以无需维持一个庞大且复杂的有限状态机而做出明智的决策的机器。GOAP的一个Action只有在其所有前提条件都得到满足的情况下才能执行，并且每个动作都会以某种方式改变世界的状态。</p>
+<p>也就是， 让AI创造他们自己的方法去解决问题，我们提供给它一系列可能的动作作为对这个世界的描述，和每个动作使用的先决条件，和行动带来的影响。AI拥有一个初始状态和他需要达到的目标。有一组目标，AI可以通过优先级或当前状态选择一个。计划系统决定一个动作序列来满足当 前目标，计划出一个像路径一样的能最简单达到目标状态的动作序列。</p>
+<h3 id="goap">GOAP使用场景</h3>
+<p>所有需要用到复杂AI的地方都可以使用，为什么非要是复杂AI呢，因为简单AI用FSM或行为树足以干净利落的解决问题，就没必要舍近求远了，那么这个复杂和简单用什么来界定呢，我在这里说一下我的标准，如果一个FSM的连线或者切换关系已经让人感觉一团糟，一个行为树的树状图非常庞大（100起），这个时候，你就可以考虑使用GOAP来化解难题了。</p>
+<h3 id="goap_1">GOAP中的一些概念</h3>
+<p>WorldState,Condition,Sensor,Action,A*</p>
+<p>Action：它由前提条件（PreCondition）和效果（Effect）组成，一般都是键值对，要执行一个Action，需要先检查前提条件是否满足，然后再把效果内容加入到Memory中（可选）</p>
+<p>Goal：AI的目标，也是包含一个或多个键值对，会以此为基准使用A*算法展开路径搜索。例如：</p>
+<p>Memory：AI的记忆，更新维护AI所认知的世界状态，偏静态。例如：{‘hasMoney’: true}</p>
+<p>Sensor：感知者，其本质和Memory一样，但是偏动态，之所以需要他是因为我们很多时候需要做一下逻辑处理才会把世界状态写入Memory，例如，AI在血量小于30%时会寻找掩护物，要处理这个过程，我们需要一个Sensor来订阅AI的血量改变状态，每次改变就判断是否小于30%，如果是，就把Memory中”isInDanger”设置为true。</p>
+<h3 id="_15">具体示例：</h3>
+<pre><code class="language-c#">//Action：{名称：建造Axe}，{先决条件：hasWood = true，hasSteel = true}，{效果：hasAxe = true，hasWood = false，hasSteel = false}，{权重：10}
+ReGoapTestsHelper.GetCustomAction(gameObject, &quot;CreateAxe&quot;,
+    new Dictionary&lt;string, object&gt; {{&quot;hasWood&quot;, true}, {&quot;hasSteel&quot;, true}},
+    new Dictionary&lt;string, object&gt; {{&quot;hasAxe&quot;, true}, {&quot;hasWood&quot;, false}, {&quot;hasSteel&quot;, false}}, 10);
+//Action：{名称：砍树}，{先决条件：无}，{效果：hasRawWood = true}，{权重：2}
+ReGoapTestsHelper.GetCustomAction(gameObject, &quot;ChopTree&quot;,
+    new Dictionary&lt;string, object&gt; { },
+    new Dictionary&lt;string, object&gt; {{&quot;hasRawWood&quot;, true}}, 2);
+//Action：{名称：加工原木}，{先决条件：hasRawWood = true}，{效果：hasRawWood = false，hasWood = true}，{权重：5}
+ReGoapTestsHelper.GetCustomAction(gameObject, &quot;WorksWood&quot;,
+    new Dictionary&lt;string, object&gt; {{&quot;hasRawWood&quot;, true}},
+    new Dictionary&lt;string, object&gt; {{&quot;hasWood&quot;, true}, {&quot;hasRawWood&quot;, false}}, 5);
+//Action：{名称：拥有矿山}，{先决条件：无}，{效果：hasOre = true}，{权重：10}
+ReGoapTestsHelper.GetCustomAction(gameObject, &quot;MineOre&quot;,
+    new Dictionary&lt;string, object&gt; { },
+    new Dictionary&lt;string, object&gt; {{&quot;hasOre&quot;, true}}, 10);
+//Action：{名称：加工矿石}，{先决条件：hasOre = true}，{效果：hasOre = false，hasSteel = ture}，{权重：10}
+ReGoapTestsHelper.GetCustomAction(gameObject, &quot;SmeltOre&quot;,
+    new Dictionary&lt;string, object&gt; {{&quot;hasOre&quot;, true}},
+    new Dictionary&lt;string, object&gt; {{&quot;hasSteel&quot;, true}, {&quot;hasOre&quot;, false}}, 10);
+//Goal：{名称：拥有Axe}，{目标状态：hasAxe = true}，{优先级：1}
+var hasAxeGoal = ReGoapTestsHelper.GetCustomGoal(gameObject, &quot;HasAxeGoal&quot;,
+    new Dictionary&lt;string, object&gt; {{&quot;hasAxe&quot;, true}}, 1);
+//Goal：{名称：拥有Axe和矿山}，{目标状态：hasAxe = true，hasOre = true，isGreedy = true}，{优先级：2}
+var greedyHasAxeAndOreGoal = ReGoapTestsHelper.GetCustomGoal(gameObject, &quot;GreedyHasAxeAndOreGoal&quot;,
+    new Dictionary&lt;string, object&gt; {{&quot;hasAxe&quot;, true}, {&quot;hasOre&quot;, true}, {&quot;isGreedy&quot;, true}},
+    2);
+</code></pre>
+<p><img alt="image-20210916152957981" src="https://myfirstblog.oss-cn-hangzhou.aliyuncs.com/typoraImages_3/20210916152958.png!webp" /></p>
+<p>那么，我们现在开始进行规划，现在有两个目标，而GoalZ的优先级大于GoalY，所以会先把GoalZ纳入规划目标，但是我们找不到“贪婪的”这一状态，所以这个目标规划失败了，然后去尝试规划GoalY，它的规划结果如下</p>
+<p>即：ActionA-&gt;ActionC-&gt;ActionB-&gt;ActionD-&gt;ActionE</p>
+<p>这似乎与我们所想的ActionA-&gt;ActionB-&gt;ActionC-&gt;ActionD-&gt;ActionE结果不同，这是因为ReGoap中使用的A*是从终点-&gt;起点，而不是起点-&gt;终点的，这就会导致它只可以保证综合结果的Cost一定是所有规划里最小的，但在单次规划中并不会确定性采用权值较小的Action为下一结点，这样做是有考虑的，因为如果是从起点到终点进行的规划，就会多出非常多的可能性，更多的可能性意味着更多的计算，这对于要求低延迟的游戏造成的后果是不可接受的。</p>
+<h3 id="_16">与行为树和状态机的对比</h3>
+<p><strong>缺点</strong></p>
+<ul>
+<li>GOAP学习成本偏高</li>
+<li>GOAP默认不保证Action顺序，如果我们想要强制指定顺序，需要额外做一些操作，但是一般而言我们的AI也不会去在意这种无关紧要的顺序，因为重要的顺序我们已经规范好了。</li>
+<li>GOAP毕竟使用了运行时规划，会对游戏性能产生一定的影响，但是这种目标导向的A*规划在AI复杂的情况下，性能并不一定比FSM/行为树弱。</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>解耦目标和行为，设计时可以更加专注的设计AI的行为不用过多考虑目标，新增，减少Action非常方便，不会像FSM/行为树那样具有那么强的入侵性和破坏性，提高了开发效率</li>
+<li>动态规划的能力，这会使我们的AI看起来更加“智能”</li>
+<li>配置方便，易于理解，完全可以让策划使用EXCEL接管AI开发工作</li>
+</ul>
+<h2 id="htnhierarchical-task-networks">HTN（Hierarchical Task Networks）：</h2>
+<h3 id="_17">学习资料：</h3>
+<p><a href="https://www.zhihu.com/question/323258599/answer/1941657770">(3 封私信 / 45 条消息) 学习HTN规划技术要了解哪些东西? - 知乎 (zhihu.com)</a></p>
+<h3 id="_18">概念介绍：</h3>
+<p>在AI开发中，一个普遍需要解决的问题是行为选择。这个问题有很多解决方案，比如FSM有限状态机、行为树、基于效用的选择、神经网络和规划器。这篇文章通过利用在开发过程中可能遇到的现实世界中的项目例子来探究一个类型规划器的细微差别，这类规划器称为分层任务网络(HTN)规划器。</p>
+<p>HTN这样的规划器架构，是将一个问题作为输入，并提供一系列解决问题的步骤。在HTN术语中，这一系列步骤称为一个计划(plan)。HTN相对于其他规划器的独特之处在于，它允许我们把问题表现为一个非常高级（抽象）的计划(plan)，通过它的规划过程，递归地把这个任务分解成更小的任务。当这个过程完成时，剩下生成的是一组表示计划(plan)的原子任务。</p>
+<h3 id="_19">关键词：</h3>
+<p>自前往后，任务，分解任务，运行时规划</p>
+<h4 id="_20">大致架构</h4>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/ef0a710c-364b-4997-98b0-7ddacdca53d3_image.png" /></p>
+<h3 id="_21">详细概念：</h3>
+<h4 id="the-world-state">世界状态（The World State）</h4>
+<p>世界状态（World State）是指在任何给定时间点，描绘环境和代理（通常是游戏中的角色或者是一个自主的软件代理）属性的一组变量或属性值。这些变量或属性值描述了环境和代理当前的情况，允许规划系统根据这些信息做出决策。</p>
+<h4 id="sensor">传感器（Sensor）</h4>
+<p>传感器(sensor)可以管理不同的世界状态(world state)属性。一些不同传感器的例子包括视觉、听觉、范围和生命值传感器。这些传感器的工作原理与任何其他人工智能系统相同，只是增加了一个步骤，即把它们的信息编码成我们的HTN能够理解的世界状态(world state)。</p>
+<h4 id="primitive-tasks">原子任务（Primitive Tasks)</h4>
+<p>原子任务是指不能再被分解为更小任务的基础任务。它们是HTN执行过程中的最基本单位，直接映射到实际动作或操作上。原子任务通常与特定的动作相对应，这些动作在世界状态上具有直接影响，改变环境或者代理的状态。</p>
+<p>假设有一个探索游戏，其中的HTN规划目标是让角色寻找并收集游戏世界中的特定资源。这个过程可能包括复合任务，如“探索区域”和“收集资源”。其中，“探索区域”可能进一步分解为“移动到区域A”和“搜索区域A”，最终，“移动到区域A”这种动作就是一个原子任务，因为它直接对应到游戏世界中的一个不可再分的动作。</p>
+<h4 id="composite-tasks">复合任务（Composite Tasks）</h4>
+<p>复合任务是指可以被进一步分解为更多子任务（复合任务或原子任务）的任务。这种任务的分解是基于任务的层次结构进行的，其目的是通过逐层分解来简化问题解决过程，直至所有的任务被分解为可直接执行的原子任务。</p>
+<p>以一个简化的机器人清理房间的任务为例，顶层的复合任务可能是“清理房间”。这个任务可以进一步分解为“清理地板”和“整理桌子”两个复合任务。继续分解，“清理地板”可能变为“扫地”和“拖地”两个原子任务，而“整理桌子”可能进一步分解为“拾起物品”和“擦拭桌面”等原子任务。</p>
+<h4 id="method">方法（method）</h4>
+<p>"方法"用于描述如何将复合任务分解成更具体的子任务序列。这些子任务可以是进一步的复合任务，需要继续分解，或者是原子任务，直接对应于可执行的动作。方法基本上定义了从高层任务到更低层、更具体任务之间的分解规则和逻辑。</p>
+<h4 id="_22">三者关系</h4>
+<p>复合任务实际上只是一组方法(method)的容器，这些方法(method)每一个都是用来表示完成某个高级任务的不同方式</p>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/db2db7e0-546b-4eb6-ac80-d365d11dd2f8_image.png" /></p>
+<h4 id="plan">计划（Plan）</h4>
+<p>计划（plan）是指从初始状态到达目标状态的一系列可执行动作的组合。这些动作是通过对初步任务（可能是一个或多个复合任务）的逐步分解和具体化得到的。最终，这些动作被组织成一个顺序或有时是并行的执行序列，旨在完成给定的目标或任务。</p>
+<p>假设有一个机器人在仓库环境中的任务是从仓库的一端将一箱货物移动到另一端，并且途中需要避开障碍物。</p>
+<ol>
+<li>
+<p><strong>高层任务</strong>：将货物从A点移动到B点。</p>
+</li>
+<li>
+<p>复合任务分解</p>
+</li>
+</ol>
+<p>：这个高层任务可以分解为几个子任务：</p>
+<ul>
+<li>定位货物。</li>
+<li>搬起货物。</li>
+<li>规划到达B点的路径，考虑避开障碍物。</li>
+<li>沿规划路径移动货物。</li>
+<li>在B点放下货物。</li>
+</ul>
+<h4 id="planner">规划器（Planner）</h4>
+<p>（Planner）是一个核心组件，负责执行整个规划流程，即从初始状态开始，通过逐步分解任务并应用相应的方法，最终生成一个实现目标的计划。</p>
+<p>伪代码实现：</p>
+<pre><code class="language-C#">    //规划（核心）
+    public void Plan()
+    {
+        //先复制一份世界状态
+        var worldState = HTNWorld.CopyWorldState();
+        //将存储列表清空，避免上次计划结果的影响
+        FinalTasks.Clear();
+        //将根任务压进栈中，准备分解
+        taskOfProcess.Push(rootTask);
+        //只要栈还没空，就继续分解
+        while(taskOfProcess.Count &gt; 0)
+        {
+            //拿出栈顶的元素
+            var task = taskOfProcess.Pop();
+            //如果这个元素是复合任务
+            if(task is CompoundTask cTask)
+            {
+                //判断是否可以执行
+                if(cTask.MetCondition(worldState))
+                {
+                    /*如果可以执行，就肯定有可用的方法，
+                    就将该方法的子任务都压入栈中，以便继续分解*/
+                    var subTask = cTask.ValidMethod.SubTask;
+                    foreach(var t in subTask)
+                    {
+                        taskOfProcess.Push(t);
+                    }
+                    /*通过上面的步骤我们知道，能被压进栈中的只有
+                    复合任务和原子任务，方法本身并不会入栈*/
+                }
+            }
+            else //否则，这个元素就是原子任务
+            {
+                //将该元素转为原子任务，因为原本是IBaseTask类型
+                var pTask = task as PrimitiveTask;
+                //再将该原子任务加入存放分解完成的任务列表
+                FinalTasks.Push(pTask);
+            }
+        }
+</code></pre>
+<h4 id="_23">执行器：</h4>
+<p>规划器的要点在于对「复合任务」的分解，这里提一下，一个HTN会保证有一个复合任务做为根任务，就和行为树的根节点一样。分解也是由此开始：</p>
+<pre><code class="language-C#">//用于描述运行结果的枚举（如果有看上一篇行为树的话
+public enum EStatus
+{
+    Failure, Success, Running, 
+}
+public class HTNPlanRunner
+{
+    //当前运行状态
+    private EStatus curState;
+    //直接将规划器包含进来，方便重新规划
+    private readonly HTNPlanner planner;
+    //当前执行的原子任务
+    private PrimitiveTask curTask;
+    //标记「原子任务列表是否还有元素、能够继续」
+    private bool canContinue;
+
+    public HTNPlanRunner(HTNPlanner planner)
+    {
+        this.planner = planner;
+        curState = EStatus.Failure;
+    }
+
+    public void RunPlan()
+    {
+        //如果当前运行状态是失败（一开始默认失败）
+        if(curState == EStatus.Failure)
+        {
+            //就规划一次
+            planner.Plan();
+        }
+        //如果当前运行状态是成功，就表示当前任务完成了
+        if(curState == EStatus.Success)
+        {
+            //让当前原子任务造成影响
+            curTask.Effect();
+        }
+        /*如果当前状态不是「正在执行」，就取出新一个原子任务作为当前任务
+        无论失败还是成功，都要这么做。因为如果是失败，肯定在代码运行到这
+        之前，已经进行了一次规划，理应获取新规划出的任务来运行；如果是因
+        为成功，那也要取出新任务来运行*/
+        if(curState != EStatus.Running)
+        {
+            //用TryPop的返回结果判断规划器的FinalTasks是否为空
+            canContinue = planner.FinalTasks.TryPop(out curTask);
+        }
+        /*如果canContinue为false，那curTask会为null也视作失败（其实应该是「全部
+        完成」，但全部完成和失败是一样的，都要重新规划）。所以只有当canContinue &amp;&amp; curTask.MetCondition()都满足时，才读取当前原子任务的运行状态，否则就失败。*/
+        curState = canContinue &amp;&amp; curTask.MetCondition() ? curTask.Operator() : EStatus.Failure;
+    }
+}
+</code></pre>
+<h2 id="ai-htnhtn">只狼的游戏AI----以弦一郎为例（行为树与HTN的结合，变种的HTN或者行为树）</h2>
+<h4 id="_24">写在开头：</h4>
+<p><strong>动作游戏是贩卖关于强大角色或能力的幻想</strong>。</p>
+<h4 id="ai_1">AI结构：</h4>
+<p>FromSoftWare的ai配置是用lua进行配置</p>
+<p><em>Lua 是一种轻量小巧的脚本语言，用标准C语言编写并以源代码形式开放， 其设计目的是为了嵌入应用程序中，从而为应用程序提供灵活的扩展和定制功能。</em></p>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/b301c86dd22698c44a8deee8d327ef0a-910-775.png" /></p>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/v2-d7c4bba0d6c91ccc34418a46ccb09579_r.jpg" /></p>
+<ul>
+<li><strong>Goal.Activate主动计划——自由态时调用</strong> 根据与玩家距离、方位、状态，从众多任务里随机选择一个执行。任务的随机是有权重的，按照设定的权重分配</li>
+</ul>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/v2-1a700dcc21f30e50aebd5dc026bc3b7e_r.jpg" /></p>
+<ul>
+<li><strong>Goal.Interrupt变招计划——不只是读指令</strong> 由于玩家角色的特定行为，中断原有计划转为执行其他动作的计划。</li>
+</ul>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/v2-a89d37d7d98d4513371099c8176dffe9_1440w.webp" /></p>
+<ul>
+<li><strong>Goal.Kengeki交锋计划</strong> 根据玩家格挡或自身格挡的结果判断，从众多任务里随机选择一个执行。</li>
+</ul>
+<p><img alt="img" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/v2-7d8f1b034d1e02bce986187dd8e9ae22_r.jpg" /></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>

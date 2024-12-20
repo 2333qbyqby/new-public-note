@@ -1,5 +1,54 @@
 site_name: Fivuvuv's note
+repo_url: https://github.com/2333qbyqby/new-public-note
+repo_name: 2333qbyqby/new-public-note
+collapse_simgle_pages: true
+nav:
+  - ...
+#- Home: index.md
+# - 计算机语言:
+#     - CPP:
+#     - CSharp:
+#     - UEC++:
+#     - Python:
+#- Unity: 
+#  - ai研究概述.md
+#  - 关于github项目蔚蓝手感2d控制器的研究.md
+#- 数据结构与算法:
+#  - assets/default.md
+#  - 图形与视觉:
+#   - defaultBackUp/default.md
+#  - 计算机基础:
+#   - defaultBackUp/default.md
+#  - 常用工具使用:
+#   - defaultBackUp/default.md
+# - 杂项:
+  #  - 杂项/mkdocs命令.md
+#  - 研究生打杂:
+#   - defaultBackUp/default.md
+#  - 数学:
+#   - defaultBackUp/default.md
+#  - 面试:
+#   - defaultBackUp/default.md
 theme:
   name: 'material'
+  logo: assets/images/hinalogo.jpg
+  favicon: assets/images/hinalogo.jpg
+  font: 
+    text: Lato
   palette:
-    primary: black
+    #primary: black
+  - media: "(prefers-color-scheme: light)" 
+    scheme: default  #配色方案：浅色模式
+    primary: black  #原色，默认蓝，用于标题、侧边栏、文本链接和其他几个组件
+    accent: black  #强调色，默认蓝，可以交互的元素如悬停链接、按钮和滚动条
+    toggle:
+      icon: material/weather-sunny #图标，太阳
+      name: Switch to dark mode
+  - media: "(prefers-color-scheme: dark)"  
+    scheme: slate  #配色方案：深色模式
+    toggle:
+      icon: material/weather-night  #图标，月亮
+      name: Switch to light mode
+plugins:
+  - search
+  - awesome-pages

@@ -1,0 +1,1606 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../readme/">
+      
+      
+        <link rel="next" href="../Unity/ai%E7%A0%94%E7%A9%B6%E6%A6%82%E8%BF%B0/">
+      
+      
+      <link rel="icon" href="../assets/images/hinalogo.jpg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.49">
+    
+    
+      
+        <title>在unity中的一个比较完善的回合制buff系统框架（暂时已废弃） - Fivuvuv's note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6f8fc17f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Lato";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#unitybuff" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Fivuvuv&#39;s note" class="md-header__button md-logo" aria-label="Fivuvuv's note" data-md-component="logo">
+      
+  <img src="../assets/images/hinalogo.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Fivuvuv's note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              在unity中的一个比较完善的回合制buff系统框架（暂时已废弃）
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="black"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/2333qbyqby/new-public-note" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2333qbyqby/new-public-note
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Fivuvuv&#39;s note" class="md-nav__button md-logo" aria-label="Fivuvuv's note" data-md-component="logo">
+      
+  <img src="../assets/images/hinalogo.jpg" alt="logo">
+
+    </a>
+    Fivuvuv's note
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/2333qbyqby/new-public-note" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    2333qbyqby/new-public-note
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../readme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to Fivuvuv's Note
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unity
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unity
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Unity/%E5%85%B3%E4%BA%8Egithub%E9%A1%B9%E7%9B%AE%E8%94%9A%E8%93%9D%E6%89%8B%E6%84%9F2d%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E7%A0%94%E7%A9%B6/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    关于github项目蔚蓝手感2d控制器的研究
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Unity/ai%E7%A0%94%E7%A9%B6%E6%A6%82%E8%BF%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ai研究概述
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../图形与视觉" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    图形与视觉
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    计算机语言
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            计算机语言
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AF%AD%E8%A8%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../数据结构与算法" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数据结构与算法
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../计算机基础" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    计算机基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../常见工具使用" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    常用工具使用
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    杂项
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            杂项
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E6%9D%82%E9%A1%B9/mkdocs%E5%91%BD%E4%BB%A4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mkdocs命令
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../研究生打杂" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    研究生打杂
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../数学" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    数学
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../面试" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    面试
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      前言：
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buff" class="md-nav__link">
+    <span class="md-ellipsis">
+      原本的buff系统：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="原本的buff系统：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buff_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      原本buff系统组成：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="原本buff系统组成：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buffdata" class="md-nav__link">
+    <span class="md-ellipsis">
+      BuffData
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffinfo" class="md-nav__link">
+    <span class="md-ellipsis">
+      BuffInfo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buffhandler" class="md-nav__link">
+    <span class="md-ellipsis">
+      BuffHandler
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      使用：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      引擎内配置：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#buff_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      新buff系统：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="新buff系统：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#buff_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      旧buff系统的问题：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buff_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      新buff系统组成：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buff_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      新buff系统系统拆解：
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="新buff系统系统拆解：">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      层次结构：
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#luban" class="md-nav__link">
+    <span class="md-ellipsis">
+      luban层配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#unityso" class="md-nav__link">
+    <span class="md-ellipsis">
+      unitySO层配置
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      具体工作流程：
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="unitybuff">在unity中的一个比较完善的回合制buff系统框架（暂时已废弃）</h1>
+<h2 id="_1">前言：</h2>
+<p>​   在前两个月开发的的cusga，笔者仿照猴叔的可扩展俯视角射击<a href="https://zhuanlan.zhihu.com/p/416805924">用Unity制作一个极具扩展性的顶视角射击游戏战斗系统 - 知乎 (zhihu.com)</a></p>
+<p>完成了游戏中的buff系统的构建，经过了一些小小的魔改，在配置上和扩展上达到了可以接受的程度，但是还是饱受另一位配置的程序的诟病，于是有了这篇文章，基于之前的框架，进行一些重构，来达到配置更简单，更容易扩展的目的。</p>
+<h2 id="buff">原本的buff系统：</h2>
+<h3 id="buff_1">原本buff系统组成：</h3>
+<p>(本buff系统基本上来自于猴叔的架构，所以看过猴叔的可以简单地跳过)</p>
+<h4 id="buffdata">BuffData</h4>
+<p>原本的buff系统大体由BuffData,BuffInfo,BuffHandler组成，其中buffData是buff的基础配置，是静态的配置，由一些buff的信息和回调点的delegate以及各个delegate的参数组成（关于回调点的概念，请参考上面的知乎文章，另外，在旧的buff系统中，其实回调点参数都没有使用），buffdata的具体定义如下：</p>
+<pre><code class="language-C#">public class BuffData
+{
+
+    /// &lt;summary&gt;
+    /// buff的唯一id
+    /// &lt;/summary&gt;
+    public string id;
+    /// &lt;summary&gt;
+    /// buff的名字
+    /// &lt;/summary&gt;
+    public string buffName;
+    /// &lt;summary&gt;
+    /// 存储buff的icon图标的路径，resoueces读取，后面没用上
+    /// &lt;/summary&gt;
+    public string buffIcon;
+    /// &lt;summary&gt;
+    /// 用于方便检索的tag，例如：火焰，冰冻，中毒等
+    /// &lt;/summary&gt;
+    public string[] tags;
+    /// &lt;summary&gt;
+    /// buff的最高层数
+    /// &lt;/summary&gt;
+    public int maxStack;
+    //当buff的层数发生变化时，buff的更新策略
+    public BuffUpdateEnum buffUpdateEnum;
+
+    public BuffRemoveStackUpdateEnum removeStackUpdateEnum;
+
+    //buff的时间信息
+    public int duringCount;
+    /// &lt;summary&gt;
+    /// 是否是永久的buff
+    /// &lt;/summary&gt;
+    public bool isPermanent;
+    /// &lt;summary&gt;
+    /// buff会给角色添加的属性，暂定两种，一种加算，一种乘算
+    /// &lt;/summary&gt;
+    public ChaProperty[] propMod;
+    /// &lt;summary&gt;
+    /// buff对于角色状态的修改
+    /// &lt;/summary&gt;
+    public ChaControlState stateMod;
+    /// &lt;summary&gt;
+    /// buff在创建的时候的事件
+    /// &lt;/summary&gt;
+    public OnBuffCreate onCreate;
+    public object[] onCreateParams;
+    /// &lt;summary&gt;
+    /// buff在移除的时候的事件
+    /// &lt;/summary&gt;
+    public OnBuffRemove onRemove;
+    public object[] onRemoveParams;
+    /// &lt;summary&gt;
+    /// 在回合开始的时候的触发的事件
+    /// &lt;/summary&gt;
+    public OnRoundStart onRoundStart;
+    public object[] onRoundStartParams;
+    /// &lt;summary&gt;
+    /// 在回合结束的时候触发的事件
+    /// &lt;/summary&gt;
+    public OnRoundEnd onRoundEnd;
+    public object[] onRoundEndParams;
+    /// &lt;summary&gt;
+    /// 在伤害流程中，持有这个buff的角色作为攻击者时触发的事件
+    /// &lt;/summary&gt;
+    public BuffOnHit onHit;
+    public object[] onHitParams;
+    /// &lt;summary&gt;
+    /// 在伤害流程中，持有这个buff的角色作为被攻击者时触发的事件
+    /// &lt;/summary&gt;
+    public BuffOnBeHurt onBeHurt;
+    public object[] onBeHurtParams;
+    /// &lt;summary&gt;
+    /// 在开局玩家操作阶段roll骰子时触发的事件
+    /// &lt;/summary&gt;
+    public BuffOnRoll onRoll;
+    public object[] onRollParams;
+    /// &lt;summary&gt;
+    /// 在伤害流程中，如果击杀目标，会触发的事件
+    /// &lt;/summary&gt;
+    public BuffOnkill onKill;
+    public object[] onKillParams;
+
+    public BuffOnBeKilled onBeKilled;
+    public object[] onBeKilledParams;
+
+    public BuffOnCast OnCast;
+    public object[] onCastParams;
+
+    public OnAddBuff onAddBuff;
+    public object[] onAddBuffParams;
+
+    public OnGetFinalDamage onGetFinalDamage;
+    public object[] onGetFinalDamageParams;
+    public BuffData(
+        string id, string name, string icon, string[] tags, int maxStack, int duringCount, bool isPermanent,
+        BuffUpdateEnum buffUpdateEnum, BuffRemoveStackUpdateEnum removeStackUpdateEnum,
+        string onCreate, object[] onCreateParams,
+        string onRemove, object[] onRemoveParams,
+        string onRoundStart, object[] onRoundStartParams,
+        string onRoundEnd, object[] onRoundEndParams,
+        string onHit, object[] onHitParams,
+        string onBeHurt, object[] onBeHurtParams,
+        string onRoll, object[] onRollParams,
+        string onKill, object[] onKillParams,
+        string onBeKilled, object[] onBeKilledParams,
+        string onCast, object[] onCastParams,
+        string onAddBuff, object[] onAddBuffParams,
+        string onGetFinalDamage, object[] onGetFinalDamageParams,
+        ChaControlState stateMod, ChaProperty[] propMod = null
+        )
+    {
+        this.id = id;
+        this.buffName = name;
+        this.buffIcon = icon;
+        this.tags = tags;
+        this.maxStack = maxStack;
+        this.duringCount = duringCount;
+        this.isPermanent = isPermanent;
+        this.propMod = new ChaProperty[2]
+            {ChaProperty.zero,
+             ChaProperty.zero
+        };
+
+        if (propMod != null)
+        {
+            for (int i = 0; i &lt; Mathf.Min(propMod.Length, 2); i++)
+            {
+                this.propMod[i] = propMod[i];
+            }
+        }
+        this.stateMod = stateMod;
+
+        this.onCreate = (onCreate == &quot;&quot; )? null : DesignerScripts.BuffEvents.onCreateFunc[onCreate];
+        this.onCreateParams = onCreateParams;
+        this.onRemove = (onRemove == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onRemoveFunc[onRemove];
+        this.onRemoveParams = onRemoveParams;
+        this.onRoundStart = (onRoundStart == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onRoundStartFunc[onRoundStart];
+        this.onRoundStartParams = onRoundStartParams;
+        this.onRoundEnd = (onRoundEnd == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onRoundEndFunc[onRoundEnd];
+        this.onRoundEndParams = onRoundEndParams;
+        this.onHit = (onHit == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onBuffHitFunc[onHit];
+        this.onHitParams = onHitParams;
+        this.onBeHurt = (onBeHurt == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onBeHurtFunc[onBeHurt];
+        this.onBeHurtParams = onBeHurtParams;
+        this.onRoll = (onRoll == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onRollFunc[onRoll];
+        this.onRollParams = onRollParams;
+        this.onKill = (onKill == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onKillFunc[onKill];
+        this.onKillParams = onKillParams;
+        this.onBeKilled = (onBeKilled == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onBeKillFunc[onBeKilled];
+        this.onBeKilledParams = onBeKilledParams;
+        this.OnCast = (onCast == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onCastFunc[onCast];
+        this.onCastParams = onCastParams;
+        this.onAddBuff = (onAddBuff == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onAddFunc[onAddBuff];
+        this.onAddBuffParams = onAddBuffParams;
+        this.onGetFinalDamage = (onGetFinalDamage == &quot;&quot;) ? null : DesignerScripts.BuffEvents.onGetFinalDamageFunc[onGetFinalDamage];
+        this.onGetFinalDamageParams = onGetFinalDamageParams;
+    }
+
+
+}
+/// &lt;summary&gt;
+/// buff的创建，移除，回合开始，回合结束，被攻击，攻击，被击杀，击杀等事件
+/// &lt;/summary&gt;
+/// &lt;param name=&quot;buff&quot;&gt;&lt;/param&gt;
+public delegate void OnBuffCreate(BuffInfo buff);
+public delegate void OnBuffRemove(BuffInfo buff);
+public delegate void OnRoundStart(BuffInfo buff);
+public delegate void OnRoundEnd(BuffInfo buff);
+public delegate void BuffOnHit(BuffInfo buff, DamageInfo damageInfo, GameObject target);
+public delegate void BuffOnBeHurt(BuffInfo buff, DamageInfo damageInfo, GameObject attacker);
+public delegate void BuffOnRoll(BuffInfo buffInfo);
+public delegate void BuffOnkill(BuffInfo buffInfo, DamageInfo damageInfo, GameObject target);
+public delegate void BuffOnBeKilled(BuffInfo buffInfo, DamageInfo damageInfo, GameObject attacker);
+public delegate SingleDiceObj BuffOnCast(BuffInfo buffInfo, SingleDiceObj singleDiceObj);
+public delegate void OnAddBuff(BuffInfo buffInfo);
+public delegate void OnGetFinalDamage(BuffInfo buffInfo,DamageInfo damageInfo);
+</code></pre>
+<p>可以看到基本上和猴叔的buffData定义保持一致，只不过做出了一些基于回合制的特别改动，例如回调点的改动以及一些参数描述上的的改动（待补充）</p>
+<h4 id="buffinfo">BuffInfo</h4>
+<p>接下来是buffInfo,buff,BuffInfo是运行时实时进行刷新的buff实例，需要注意的是，这边的buff信息的架构并没有采用猴叔的三层架构，而是只采用了两层，所以代码会有些不同，完整代码如下</p>
+<pre><code class="language-c#">using System;
+using System.Collections.Generic;
+using UnityEngine;
+[Serializable]
+public class BuffInfo
+{
+    /// &lt;summary&gt;
+    /// buff数据的模板
+    /// &lt;/summary&gt;
+    public BuffData buffData;
+    /// &lt;summary&gt;
+    /// buff是否是永久的
+    /// &lt;/summary&gt;
+    public bool isPermanent;
+    /// &lt;summary&gt;
+    /// buff的创建者
+    /// &lt;/summary&gt;
+    public GameObject creator = null;
+    /// &lt;summary&gt;
+    /// buff的目标
+    /// &lt;/summary&gt;
+    public GameObject target = null;
+    /// &lt;summary&gt;
+    /// 回合计数器
+    /// &lt;/summary&gt;
+    public int roundCount;
+    /// &lt;summary&gt;
+    /// 执行次数
+    /// &lt;/summary&gt;
+    public int ticked = 0;
+    /// &lt;summary&gt;
+    /// 当前buff的层数
+    /// &lt;/summary&gt;
+    public int curStack;
+
+    public Dictionary&lt;string, object&gt; buffParam = new Dictionary&lt;string, object&gt;();
+
+
+    public BuffInfo(
+        BuffData buffData, GameObject creator, GameObject target, int stack = 1, bool isPermanent = false,
+        Dictionary&lt;string, object&gt; buffParam = null
+        )
+    {
+        this.buffData = buffData;
+        this.creator = creator;
+        this.target = target;
+        this.curStack = stack;
+        this.isPermanent = buffData.isPermanent;
+        //this.isPermanent = buffData.isPermanent;
+        this.roundCount = buffData.duringCount;
+        if (buffParam != null)
+        {
+            foreach (var item in buffParam)
+            {
+                this.buffParam.Add(item.Key, item.Value);
+            }
+        }
+    }
+
+    public BuffInfo(
+        BuffData buffData, int stack = 1, bool isPermanent = false,
+        Dictionary&lt;string, object&gt; buffParam = null
+        )
+    {
+        this.buffData = buffData;
+        this.curStack = stack;
+        this.isPermanent = isPermanent;
+        this.roundCount = buffData.duringCount;
+        if (buffParam != null)
+        {
+            foreach (var item in buffParam)
+            {
+                this.buffParam.Add(item.Key, item.Value);
+            }
+        }
+    }
+    //深拷贝
+    public BuffInfo(BuffInfo buffInfo)
+    {
+        this.buffData =buffInfo.buffData;
+        this.creator = buffInfo.creator;
+        this.target = buffInfo.target;
+        this.curStack = buffInfo.curStack;
+        this.isPermanent = buffInfo.isPermanent;
+        this.buffParam = buffInfo.buffParam;
+        this.roundCount=buffInfo.roundCount;
+    }
+}
+
+public enum BuffRemoveStackUpdateEnum
+{
+    Reduce,
+    Clear,
+
+}
+
+public enum BuffUpdateEnum
+{
+    Add,
+    Replace,
+    Keep
+}
+
+
+</code></pre>
+<p>BuffInfo包含了一些Runtime比较重要的信息，以及运行时的额外参数，可以看到这边为了扩展性采用了string,object的字典,关于这边的构造函数，主要还是以需求为主，有需求再往上加。</p>
+<h3 id="buffhandler">BuffHandler</h3>
+<p>最后是BuffHandler，Buffhandler负责管理具体游戏中角色的buff的添加和删除，以及供外部调用触发回调点函数，当然这边的回调点函数是不完全的，在有些情况下会出问题，这个在后续会讲到。</p>
+<pre><code class="language-c#">public class BuffHandler : MonoBehaviour
+{
+    [Description(&quot;Buff列表&quot;)]
+    public List&lt;BuffInfo&gt; buffList = new List&lt;BuffInfo&gt;();
+    //所有判断的时候如果buff需要移除，先加入这个列表，然后再进行移除
+    private List&lt;BuffInfo&gt; removeList = new List&lt;BuffInfo&gt;();
+
+    public void AddBuff(BuffInfo buffInfo, GameObject creator)
+    {
+        //添加buff时候的回调点触发
+        buffInfo.creator = creator;
+        buffInfo.target = this.gameObject;
+        HalidomManager.Instance.OnAddBuff(buffInfo);
+        BuffInfo findBuffInfo = buffList.Find(x =&gt; x.buffData.id == buffInfo.buffData.id);
+        if (findBuffInfo != null)//获得相同的buff的情况
+        {
+            if (findBuffInfo.curStack &lt; findBuffInfo.buffData.maxStack)
+            {
+                //findBuffInfo.curStack++;
+                if (findBuffInfo.curStack + buffInfo.curStack &gt; findBuffInfo.buffData.maxStack)
+                {
+                    findBuffInfo.curStack = buffInfo.buffData.maxStack;
+                }
+                else
+                {
+                    findBuffInfo.curStack += buffInfo.curStack;
+                }
+
+                switch (findBuffInfo.buffData.buffUpdateEnum)
+                {
+                    case BuffUpdateEnum.Add:
+                        findBuffInfo.roundCount += findBuffInfo.buffData.duringCount;
+                        break;
+                    case BuffUpdateEnum.Replace:
+                        findBuffInfo.roundCount = findBuffInfo.buffData.duringCount;
+                        break;
+                    case BuffUpdateEnum.Keep:
+                        break;
+                    default:
+                        break;
+                }
+                var charac = (Character)findBuffInfo.target.GetComponent&lt;ChaState&gt;().side;
+                var index = buffList.IndexOf(findBuffInfo);
+                BuffUIManager.Instance.UpdateBuffDurationTime(charac, index, findBuffInfo.curStack);
+                //TODO:提示buff层数增加,根据buff的类型进行不同的处理
+                findBuffInfo.buffData.onCreate?.Invoke(findBuffInfo);
+            }
+            else
+            {
+                //TODO:提示buff层数已满
+            }
+        }
+        else
+        {
+
+            buffInfo.buffData.onCreate?.Invoke(buffInfo);
+            buffList.Add(buffInfo);
+            //添加buffUI
+            var charac = (Character)buffInfo.target.GetComponent&lt;ChaState&gt;().side;
+            BuffUIManager.Instance.CreateBuffUIObject(charac, buffInfo.buffData.id, buffInfo.curStack);
+        }
+    }
+
+    /// &lt;summary&gt;
+    /// 移除buff
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;buffInfo&quot;&gt;&lt;/param&gt;
+    public void RemoveBuff(BuffInfo buffInfo)
+    {
+        switch (buffInfo.buffData.removeStackUpdateEnum)
+        {
+            case BuffRemoveStackUpdateEnum.Clear:
+                buffInfo.buffData.onRemove?.Invoke(buffInfo);
+                int index = buffList.IndexOf(buffInfo);
+                var charac = (Character)buffInfo.target.GetComponent&lt;ChaState&gt;().side;
+                BuffUIManager.Instance.RemoveBuffUIObject(charac, index);
+                buffList.Remove(buffInfo);
+                break;
+            case BuffRemoveStackUpdateEnum.Reduce:
+                buffInfo.curStack--;
+                var charac1 = (Character)buffInfo.target.GetComponent&lt;ChaState&gt;().side;
+                int index1 = buffList.IndexOf(buffInfo);
+                BuffUIManager.Instance.UpdateBuffDurationTime(charac1, index1, buffInfo.curStack);
+                buffInfo.buffData.onRemove?.Invoke(buffInfo);
+                if (buffInfo.curStack &lt;= 0)
+                {
+                    int i = buffList.IndexOf(buffInfo);
+                    var c = (Character)buffInfo.target.GetComponent&lt;ChaState&gt;().side;
+                    BuffUIManager.Instance.RemoveBuffUIObject(c, i);
+                    buffList.Remove(buffInfo);
+                }
+                //TODO:关于buff层数减少的刷新
+                break;
+            default:
+                break;
+        }
+
+    }
+    /// &lt;summary&gt;
+    /// 每个回合开始的时候，对buff的时间进行处理,side表示当前是哪一方的回合
+    /// &lt;/summary&gt;
+    #region 回调点
+    public void BuffRoundStartTick(int side)
+    {
+        if (side == 0)
+        {
+            for (int i = 0; i &lt; buffList.Count; i++)
+            {
+                if (buffList[i].buffData.tags.Contains(&quot;PlayerOnRoundStart&quot;))
+                {
+                    buffList[i].buffData.onRoundStart?.Invoke(buffList[i]);
+                }
+            }
+        }
+        else if (side == 1)
+        {
+            for (int i = 0; i &lt; buffList.Count; i++)
+            {
+                if (buffList[i].buffData.tags.Contains(&quot;EnemyOnRoundStart&quot;))
+                {
+                    buffList[i].buffData.onRoundStart?.Invoke(buffList[i]);
+                }
+            }
+        }
+
+    }
+    //TODO:每个回合结束的时候，对buff的时间进行处理
+    public void BuffRoundEndTick(int side)
+    {
+        List&lt;BuffInfo&gt; removeList = new List&lt;BuffInfo&gt;();
+        //因为buffhandler既不知道是给谁挂载的，也不知道是什么回合，所以需要两个参数来判断
+        //传入的是玩家并且当前是玩家的回合
+        if (side == 0 &amp;&amp; BattleManager.Instance.GetCurrentState() == BattleManager.Instance.GetStates()[GameState.PlayerRoundEndResolution])
+        {
+
+            //触发玩家身上的有OnMyTurnEnd的buff
+            foreach (var buff in buffList)
+            {
+                if (buff.buffData.tags.Contains(&quot;OnMyTurnEnd&quot;))
+                {
+                    buff.buffData.onRoundEnd?.Invoke(buff);
+                }
+
+            }
+
+            for (int i = 0; i &lt; buffList.Count; i++)
+            {
+                if (buffList[i].buffData.tags.Contains(&quot;OnMyTurnEnd&quot;))
+                {
+                    if (buffList[i].isPermanent == false)//非永久buff
+                    {
+                        buffList[i].roundCount--;
+
+                        buffList[i].roundCount = Mathf.Max(0, buffList[i].roundCount);//可能出现负数的情况
+                        if (buffList[i].roundCount == 0)
+                        {
+                            removeList.Add(buffList[i]);
+                        }
+                    }
+                }
+
+            }
+            for (int i = 0; i &lt; removeList.Count; i++)
+            {
+                RemoveBuff(removeList[i]);
+            }
+        }
+        //传入的是敌人 在玩家的回合结束
+        else if (side == 1 &amp;&amp; BattleManager.Instance.GetCurrentState() == BattleManager.Instance.GetStates()[GameState.PlayerRoundEndResolution])
+        {
+            Debug.Log(&quot;传入的是敌人 在玩家的回合结束&quot;);
+            foreach (var buff in buffList)
+            {
+                if (buff.buffData.tags.Contains(&quot;OnOtherTurnEnd&quot;))
+                {
+                    buff.buffData.onRoundEnd?.Invoke(buff);
+                }
+
+            }
+
+            for (int i = 0; i &lt; buffList.Count; i++)
+            {
+                if (buffList[i].buffData.tags.Contains(&quot;OnOtherTurnEnd&quot;))
+                {
+                    if (buffList[i].isPermanent == false)//非永久buff
+                    {
+                        buffList[i].roundCount--;
+
+                        buffList[i].roundCount = Mathf.Max(0, buffList[i].roundCount);//可能出现负数的情况
+                        if (buffList[i].roundCount == 0)
+                        {
+                            removeList.Add(buffList[i]);
+                        }
+                    }
+                }
+
+            }
+            for (int i = 0; i &lt; removeList.Count; i++)
+            {
+                RemoveBuff(removeList[i]);
+            }
+        }
+        //传入的是玩家 在敌人的回合结束
+        else if (side == 0 &amp;&amp; BattleManager.Instance.GetCurrentState() == BattleManager.Instance.GetStates()[GameState.EnemyRoundEndResolution])
+        {
+            Debug.Log(&quot;传入的是玩家 在敌人的回合结束&quot;);
+            foreach (var buff in buffList)
+            {
+                if (buff.buffData.tags.Contains(&quot;OnOtherTurnEnd&quot;))
+                {
+                    buff.buffData.onRoundEnd?.Invoke(buff);
+                }
+
+            }
+
+            for (int i = 0; i &lt; buffList.Count; i++)
+            {
+                if (buffList[i].buffData.tags.Contains(&quot;OnOtherTurnEnd&quot;))
+                {
+                    if (buffList[i].isPermanent == false)//非永久buff
+                    {
+                        buffList[i].roundCount--;
+
+                        buffList[i].roundCount = Mathf.Max(0, buffList[i].roundCount);//可能出现负数的情况
+                        if (buffList[i].roundCount == 0)
+                        {
+                            removeList.Add(buffList[i]);
+                        }
+                    }
+                }
+
+            }
+            for (int i = 0; i &lt; removeList.Count; i++)
+            {
+                RemoveBuff(removeList[i]);
+            }
+        }
+
+        //传入的是敌人 在敌人的回合结束
+        if (side == 1 &amp;&amp; BattleManager.Instance.GetCurrentState() == BattleManager.Instance.GetStates()[GameState.EnemyRoundEndResolution])
+        {
+            Debug.Log(&quot;传入的是敌人 在敌人的回合结束&quot;);
+            //触发敌人身上的有OnMyTurnEnd的buff
+            foreach (var buff in buffList)
+            {
+                if (buff.buffData.tags.Contains(&quot;OnMyTurnEnd&quot;))
+                {
+                    buff.buffData.onRoundEnd?.Invoke(buff);
+                }
+
+            }
+
+            for (int i = 0; i &lt; buffList.Count; i++)
+            {
+                if (buffList[i].buffData.tags.Contains(&quot;OnMyTurnEnd&quot;))
+                {
+                    if (buffList[i].isPermanent == false)//非永久buff
+                    {
+                        buffList[i].roundCount--;
+
+                        buffList[i].roundCount = Mathf.Max(0, buffList[i].roundCount);//可能出现负数的情况
+                        if (buffList[i].roundCount == 0)
+                        {
+                            removeList.Add(buffList[i]);
+                        }
+                    }
+                }
+
+            }
+            for (int i = 0; i &lt; removeList.Count; i++)
+            {
+                RemoveBuff(removeList[i]);
+            }
+        }
+    }
+
+    public void BuffOnReRoll()
+    {
+        for (int i = 0; i &lt; buffList.Count; i++)
+        {
+            buffList[i].buffData.onRoll?.Invoke(buffList[i]);
+        }
+    }
+    //待定
+    public void BuffOnCast()
+    {
+        foreach (var buff in buffList)
+        {
+
+        }
+    }
+    #endregion
+    public void RecheckBuff(ChaProperty[] buffProp, ref ChaControlState chaControlState)
+    {
+
+        foreach (var buff in buffList)
+        {
+            buffProp[0] += buff.buffData.propMod[0] * buff.curStack;
+            buffProp[1] += buff.buffData.propMod[1];
+            chaControlState += buff.buffData.stateMod;
+        }
+    }
+}
+</code></pre>
+<h3 id="_2">使用：</h3>
+<p>每一个收到buff影响的character身上都挂了一个buffHandler，其他的相关manager在合适的时候调用回调点触发函数，例如在受伤时的回调函数和攻击时的回调函数，就在damageManager中触发（关于damage的详细信息，见猴与花果山的文章）</p>
+<h3 id="_3">引擎内配置：</h3>
+<p><img alt="image-20240529225508974" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/image-20240529225508974.png" /></p>
+<p>这是一个最简单buffSO的截图示例，采取了SO配置整体信息+脚本内配置回调点具体函数，在运行的时候初始化为buffData，由于一些原因，损失了每个回调点的参数，也无法进行回调点的组合和公用，因此只能说是堪堪能用。</p>
+<p>大体的工作流如下：</p>
+<p>先在写回调点event的脚本里写相应的buff的回调点函数，再手动加进相应的字典里，字典的key是回调点函数效果的枚举，因此也需要对对应相关回调点的enum进行修改，再将buffName添加进buffName的enum（其实名字直接用string也可以，因为配置步骤过多，所以enum不容易错），之后再在需要用到buffData的地方，从buffData的字典里找出相应的buffData,根据具体的情况生成buffInfo，加到具体角色身上的buffHandler的bufflist里</p>
+<h2 id="buff_2">新buff系统：</h2>
+<h3 id="buff_3">旧buff系统的问题：</h3>
+<p>从上述的描述中，其实已经可以看出，先前的buff系统在各个方面都存在不少的问题，但是这边还是要具体列举一下开发中遇到的问题。</p>
+<p>1、配置上的问题，配置的步骤太过繁琐导致容易出错，随着业务需求的增加，会很繁琐，也就是程序化的程度不够，需要指定一套相对比较完善的配置流程</p>
+<p>2、对于结构上的问题，每一个回调点：例如受击方扣除x点血量这种event，应该是可以公用的，因此需要决定参数开放在哪的问题，但是旧buff系统关于这一块没有很好地解决</p>
+<p>3、与UI的交互的问题，应该统一规定好与UI交互的位置，在移除buff图标的时候，不需要手动地调用一些方法</p>
+<h3 id="buff_4">新buff系统组成：</h3>
+<p>首先是配置，配置方面采用luban配表游戏内so中间层显示的模式，,大体的数据结构不变。</p>
+<h3 id="buff_5">新buff系统系统拆解：</h3>
+<h4 id="_4">层次结构：</h4>
+<p>主要分为luban层，SO层，和其他具体runtime时的数据层，配置的部分主要在luban层和SO层</p>
+<h4 id="luban">luban层配置</h4>
+<p>在luban的配置层，主要完成的工作是进行buffData的配置,也就是需要在excel表格中进行buffData的配置，在excel中需要进行如下配置</p>
+<table>
+<thead>
+<tr>
+<th>##var</th>
+<th>id</th>
+<th>name</th>
+<th>buffIcon</th>
+<th>tags</th>
+<th>maxStack</th>
+<th>buffRemoveStackUpdateEnum</th>
+<th>buffUpdateEnum</th>
+<th>duringCount</th>
+<th>isPermanent</th>
+<th>onCreateEvents</th>
+<th>onRemoveEvents</th>
+<th>onOtherRoundStartEvents</th>
+<th>onThisRoundStartEvents</th>
+<th>onOtherRoundEndEvents</th>
+<th>onThisRoundEndEvents</th>
+<th>onHitEvents</th>
+<th>onBeHurtEvents</th>
+<th>onKillEvents</th>
+<th>onBeKilledEvents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>##Type</td>
+<td>string</td>
+<td>string</td>
+<td>string</td>
+<td>(list#sep=|),string</td>
+<td>int</td>
+<td>BuffRemoveStackUpdateEnum</td>
+<td>BuffUpdateEnum</td>
+<td>int</td>
+<td>bool</td>
+<td>(list#sep=|),string</td>
+<td>(list#sep=|),string</td>
+<td>(list#sep=|),string</td>
+<td>(list#sep=|),string</td>
+<td>(list#sep=|),string</td>
+<td>(list#sep=|),string</td>
+<td>(list#sep=|),string</td>
+<td>(list#sep=|),string</td>
+<td>(list#sep=|),string</td>
+<td>(list#sep=|),string</td>
+</tr>
+<tr>
+<td>##</td>
+<td>buff的唯一id</td>
+<td>buff的名字</td>
+<td>路径</td>
+<td>buff的tag</td>
+<td>buff的上限层数</td>
+<td>buff移除的时候的模式</td>
+<td>buff添加的模式</td>
+<td>buff持续的回合数</td>
+<td>是否永久</td>
+<td>创建触发事件的类名列表</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>1</td>
+<td>测试buff</td>
+<td>""</td>
+<td></td>
+<td>5</td>
+<td>0</td>
+<td>0</td>
+<td>4</td>
+<td>TRUE</td>
+<td>HpEnhanceEvent</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>可以看到基本上在excel里面的配置就是之前buffData的部分配置，值得一提的是，这边的回调点配置是一个string的list,这边记录的是event的名字，每个event都是一个类，这边在具体生成的时候会反射转换成类</p>
+<h4 id="unityso">unitySO层配置</h4>
+<p>在unitySO层的配置，主要时配置一些excel中配置不了的回调点event的参数，例如我有一个event指代的是扣血，不需要为了每个buff专门写每个的扣血event,因此需要开放出变量进行配置工作（下图是一个例子）</p>
+<p><img alt="image-20240612224648289" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/image-20240612224648289.png" /></p>
+<h4 id="_5">具体工作流程：</h4>
+<p>1、先在excel表中配置buffData的一部分数据，通过luban的脚本生成json到unity的asset下（具体生成到什么文件夹看个人喜好）</p>
+<p>2、在unity中通过buffEditor生成出buffDataSO以及相应的event</p>
+<p>3、buffDataSO就是原本的buffData，需要再在实际运行的时候转成buffInfo</p>
+<p>在引擎中生成出来的时候，会在指定的路径生成出相应buff的一整个文件夹，图示如下：</p>
+<p><img alt="image-20240612230816691" src="https://typorapicturefivuvuv.oss-cn-shanghai.aliyuncs.com/picgo/image-20240612230816691.png" /></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.88dd0f4e.min.js"></script>
+      
+    
+  </body>
+</html>
