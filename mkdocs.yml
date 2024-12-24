@@ -2,6 +2,7 @@ site_name: Fivuvuv's note
 repo_url: https://github.com/2333qbyqby/new-public-note.git
 repo_name: 2333qbyqby/new-public-note
 nav:
+  - ...
 theme:
   name: 'material'
   logo: images/hinalogo.jpg
